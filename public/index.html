@@ -6,6 +6,17 @@
   <script src="bundle.js" async></script>
 </head>
 <body>
-  <h1 data-controller="example"></h1>
+  <h2>Hello</h2>
+  <div data-controller="example" data-example-greet-value="Hello">
+    <button data-action="click->example#greet" data-example-name-param="Cain">Greet Cain</button>
+    <button data-action="click->example#greet" data-example-name-param="Abel">Greet Abel</button>
+    <input data-example-target="output" type="text" readonly>
+  </div>
+  <h2>Hey</h2>
+  <div data-controller="example" data-example-greet-value="Hey">
+    <button data-action="click->example#greet" data-example-name-param="Cain">Greet Cain</button>
+    <button data-action="click->example#greet" data-example-name-param="Abel">Greet Abel</button>
+    <input data-example-target="output" type="text" readonly>
+  </div>
 </body>
 </html>

@@ -1,7 +1,13 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  connect() {
-    this.element.textContent = "It works!"
+  static targets = [ "output" ]
+  static values = {
+    greet: String
+  }
+
+  greet(event) {
+    this.outputTarget.value =
+      `${this.greetValue}, ${event.params.name}!`;
   }
 }
